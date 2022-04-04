@@ -1,0 +1,23 @@
+.container{
+    display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  
+}
+.resim{
+
+    display: grid;
+    grid-template-columns: 2fr;
+    gap:25px;
+    padding-left: 20px;
+    position: fixed;
+    
+        
+}
+.yazi{
+    display: grid;
+    grid-template-columns: 2fr;
+    padding-left:6rem;
+    padding-top: 1.7rem;
+}
