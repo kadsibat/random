@@ -19,14 +19,21 @@ const Cards = () => {
   useEffect(() => {
     axios.get("https://randomuser.me/api/")
     .then((res) => {
-      console.log(res);
+      // console.log(res);
+      setPicture(res.data.results[0].picture.large);
+        setName(res.data.results[0].name);
+        setEmailRandom(res.data.results[0].email);
+        setPhoneRandom(res.data.results[0].phone);
+        setLocationRandom(res.data.results[0].location);
+        setAge(res.data.results[0].dob);
+        setDate(res.data.results[0].registered.date);
     });
   }, []);
 
   const handleClick = () => {
     axios.get("https://randomuser.me/api/")
     .then((res) => {
-        console.log(res);
+        // console.log(res);
         setPicture(res.data.results[0].picture.large);
         setName(res.data.results[0].name);
         setEmailRandom(res.data.results[0].email);
@@ -37,7 +44,7 @@ const Cards = () => {
   }).catch((err)=>{
       console.log(err);
   })}
-  console.log(name);
+  // console.log(name);
 //   console.log(phoneRandom);
 //   console.log(picture.large);
 //   console.log(locationRandom);
