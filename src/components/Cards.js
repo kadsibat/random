@@ -15,19 +15,21 @@ const Cards = () => {
   const [locationRandom,setLocationRandom] = useState({});
   const [age, setAge] = useState("")
   const [date, setDate] = useState("")
+const url= "https://randomuser.me/api/"
 
   useEffect(() => {
-    axios.get("https://randomuser.me/api/")
-    .then((res) => {
-      // console.log(res);
-      setPicture(res.data.results[0].picture.large);
-        setName(res.data.results[0].name);
-        setEmailRandom(res.data.results[0].email);
-        setPhoneRandom(res.data.results[0].phone);
-        setLocationRandom(res.data.results[0].location);
-        setAge(res.data.results[0].dob);
-        setDate(res.data.results[0].registered.date);
-    });
+    handleClick(url)
+    // axios.get("https://randomuser.me/api/")
+    // .then((res) => {
+    //   // console.log(res);
+    //   setPicture(res.data.results[0].picture.large);
+    //     setName(res.data.results[0].name);
+    //     setEmailRandom(res.data.results[0].email);
+    //     setPhoneRandom(res.data.results[0].phone);
+    //     setLocationRandom(res.data.results[0].location);
+    //     setAge(res.data.results[0].dob);
+    //     setDate(res.data.results[0].registered.date);
+    // });
   }, []);
 
   const handleClick = () => {
